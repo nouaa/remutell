@@ -2,19 +2,19 @@
 
 k=[]
 p=[]
+node=[]
 
 N,K,Q = input().split()
 N =int(N)
 K =int(K)
 Q =int(Q)
 
-node = [[0]*N]*N
+node = [[] for _ in range(N)]
     
 for i in range(N-1):
     u,v = input().split()
     node[int(u)-1].append(int(v))
     node[int(v)-1].append(int(u))
-    
     
 k = list(map(int, input().split()))
 
@@ -22,3 +22,5 @@ for i in range(Q):
     A,B = input().split()
     A=int(A)
     B=int(B)
+
+
