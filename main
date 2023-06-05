@@ -1,1 +1,25 @@
 #https://www.acmicpc.net/problem/26274
+
+node = []
+node.append([])
+k=[]
+p=[]
+A,B
+
+l = input().split()
+N = int(l[0])
+K =int(l[1])
+Q =int(l[2])
+
+for i in range(N):
+    l = input.split()
+    node[int(l[0])].append(int(l[1]))
+    node[int(l[1])].append(int(l[0]))
+
+for i in range(K):
+    k[i]=input()
+
+for i in range(Q):
+    l = input.split()
+    A=int(l[0])
+    B=int(l[1])
