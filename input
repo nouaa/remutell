@@ -18,9 +18,25 @@ for i in range(N-1):
     
 k = list(map(int, input().split()))
 
+S=N
+
+def add(n):
+    global S
+    if(S>n):
+        S=n
+
+def run(A,B,C=0,s=0):
+    if A==B:
+        add(s)
+    else:
+        for i in node[A-1]:
+           if i != C:
+                run(i,B,A,s+1)
+                
+
 for i in range(Q):
     A,B = input().split()
     A=int(A)
     B=int(B)
-
-
+    run(A,B)
+    print(S)
