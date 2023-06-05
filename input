@@ -1,25 +1,24 @@
 #https://www.acmicpc.net/problem/26274
 
-node = []
-node.append([])
 k=[]
 p=[]
-A,B
 
-l = input().split()
-N = int(l[0])
-K =int(l[1])
-Q =int(l[2])
+N,K,Q = input().split()
+N =int(N)
+K =int(K)
+Q =int(Q)
 
-for i in range(N):
-    l = input.split()
-    node[int(l[0])].append(int(l[1]))
-    node[int(l[1])].append(int(l[0]))
-
-for i in range(K):
-    k[i]=input()
+node = [[0]*N]*N
+    
+for i in range(N-1):
+    u,v = input().split()
+    node[int(u)-1].append(int(v))
+    node[int(v)-1].append(int(u))
+    
+    
+k = list(map(int, input().split()))
 
 for i in range(Q):
-    l = input.split()
-    A=int(l[0])
-    B=int(l[1])
+    A,B = input().split()
+    A=int(A)
+    B=int(B)
