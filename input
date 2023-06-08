@@ -16,8 +16,8 @@ def in(a):
     
 for i in range(N-1):
     u,v = input().split()
-    node[in(u)].append(int(v))
-    node[in(v)].append(int(u))
+    node[in(int(u))].append(int(v))
+    node[in(int(v))].append(int(u))
     
 k = list(map(int, input().split()))
 
