@@ -11,13 +11,13 @@ Q =int(Q)
 
 node = [[] for _ in range(N)]
 
-def in(a):
+def rec(a):
     return a-1
     
 for i in range(N-1):
     u,v = input().split()
-    node[in(int(u))].append(int(v))
-    node[in(int(v))].append(int(u))
+    node[rec(int(u))].append(int(v))
+    node[rec(int(v))].append(int(u))
     
 k = list(map(int, input().split()))
 
@@ -32,7 +32,7 @@ def run(A,B,C=0,s=0):
     if A==B:
         add(s)
     else:
-        for i in node[A-1]:
+        for i in node[rec(A)]:
            if i != C:
                 run(i,B,A,s+1)
                 
