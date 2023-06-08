@@ -10,11 +10,14 @@ K =int(K)
 Q =int(Q)
 
 node = [[] for _ in range(N)]
+
+def in(a):
+    return a-1
     
 for i in range(N-1):
     u,v = input().split()
-    node[int(u)-1].append(int(v))
-    node[int(v)-1].append(int(u))
+    node[in(u)].append(int(v))
+    node[in(v)].append(int(u))
     
 k = list(map(int, input().split()))
 
